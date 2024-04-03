@@ -1,4 +1,6 @@
-# HackerRank
+# HackerRank Anotações
+Math.pow(2,z) #Para calcular exponenciação 2^z
+scanner.hasNext() #Verificar se é o fim da entrada
 
 ## Java Loops ||
 import java.util.*;
