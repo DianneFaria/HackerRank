@@ -85,3 +85,56 @@ public class Solution {
     }
 }
 
+## Java Static Initializer Block
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    static int n1;
+    static int n2;
+    static boolean flag;
+    
+    static {
+        Scanner scanner = new Scanner(System.in);
+        n1 = scanner.nextInt();
+        n2 = scanner.nextInt();
+        
+        if(n1 > 0 && n2 > 0) {
+             flag = true;
+         } else {
+             System.out.println("java.lang.Exception: Breadth and height must be positive");
+         }
+    }
+        
+    public static void main(String[] args) {
+        
+        if(flag) {
+            int area = n1 * n2;
+            System.out.println(area);
+        }
+         
+    }
+}
+
+## Java Int to String
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        int n = scanner.nextInt();
+        scanner.close();
+        String str = String.valueOf(n);
+        
+        if(str instanceof String) {
+            System.out.println("Good job");
+        } else {
+            System.out.println("Wrong answer");
+        }
+    }
+}
+
