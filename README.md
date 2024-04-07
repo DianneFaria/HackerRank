@@ -280,3 +280,41 @@ public class Solution {
         System.out.println(A.equals(reverse) ? "Yes" : "No");
     }
 }
+
+## Java String Tokens
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String a = scanner.nextLine();
+        scanner.close();
+         
+        a = removeLeadingNonLetters(a);
+         
+        if(a.length() == 0) {
+            System.out.println(0);
+            return;
+        }
+        
+        String[] arr = a.split("[^A-Za-z]+");
+        
+        System.out.println(arr.length);
+        
+        for(String i : arr) {
+            System.out.println(i);
+        }
+    }
+    
+     private static String removeLeadingNonLetters(String str) {
+        int i;
+        for (i = 0; i < str.length(); i++) {
+            if (Character.isLetter(str.charAt(i))) {
+                break;
+            }
+        }
+        return str.substring(i);
+    }
+}
