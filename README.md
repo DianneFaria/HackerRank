@@ -318,3 +318,32 @@ public class Solution {
         return str.substring(i);
     }
 }
+
+## Pattern Syntax Checker
+import java.io.*;
+import java.util.*;
+import java.util.regex.Pattern;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner scanner = new Scanner(System.in);
+       
+       int quant = Integer.parseInt(scanner.nextLine());
+       
+       while(quant > 0) {
+           String test = scanner.nextLine();
+           
+           try {
+               Pattern pat = Pattern.compile(test);
+               System.out.println("Valid");
+           } catch(Exception e) {
+               System.out.println("Invalid");
+           }
+           quant--;
+       }
+       
+       
+       
+    }
+}
