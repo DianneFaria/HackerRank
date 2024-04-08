@@ -364,3 +364,32 @@ class MyRegex {
     String num = "([01]?\\d{1,2}|2[0-4]\\d|25[0-5])";
     String pattern = num + "." +  num + "." +  num + "." + num;
 }
+
+## Valid Username Regular Expression
+import java.io.*;
+import java.util.*;
+
+class UsernameValidator {
+    public static final String regularExpression = "^[a-zA-Z]\\w{7,29}$";
+}
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        int n = Integer.parseInt(scanner.nextLine()); 
+        
+        while(n > 0) {
+            String name = scanner.nextLine(); 
+     
+            if(name.matches(UsernameValidator.regularExpression)) {
+                System.out.println("Valid");
+            } else {
+                System.out.println("Invalid");
+            }
+            n--;
+        }
+        scanner.close();
+    }
+}
